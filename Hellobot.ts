@@ -175,14 +175,14 @@ namespace Hellobot {
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     //% group="Lights"    
-    export function RGB_Car_Program(): neopixel.Strip {
+    //export function RGB_Car_Program(): neopixel.Strip {
         
-
+        
         //if (!yahStrip) {
         //    yahStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB);
         //}
         //return yahStrip;
-    }
+    //}
 
     //% blockId=HelloBot_RGB_LArm_Program block="Left Arm Light"
     //% weight=50
@@ -190,26 +190,13 @@ namespace Hellobot {
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     //% group="Lights"
-    export function RGB_LArm_Program(): neopixel.Strip {
 
-        if (!yahStripLArm) {
-            yahStripLArm = neopixel.create(DigitalPin.P6, 1, NeoPixelMode.RGB);
-        }
-        return yahStripLArm;
-    }
     //% blockId=HelloBot_RGB_Line_Program block="Line Sensor Lights"
     //% weight=50
     //% blockGap=10
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    //% group="Lights"
-    export function RGB_Line_Program(): neopixel.Strip {
 
-        if (!yahStripLine) {
-            yahStripLine = neopixel.create(DigitalPin.P5, 4, NeoPixelMode.RGB);
-        }
-        return yahStripLine;
-    }
 
     //% blockId=HelloBot_RGB_RArm_Program block="Right Arm Light"
     //% weight=50
@@ -217,13 +204,7 @@ namespace Hellobot {
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     //% group="Lights"
-    export function RGB_RArm_Program(): neopixel.Strip {
 
-        if (!yahStripRArm) {
-            yahStripRArm = neopixel.create(DigitalPin.P9, 1, NeoPixelMode.RGB);
-        }
-        return yahStripRArm;
-    }
     //% group="Distance Sensor"
     //% blockId=mbit_ultrasonic_car block="distance sensor value in %unit"
     //% color="#006400"
@@ -405,36 +386,6 @@ namespace Hellobot {
             }
         }
         return temp;
-    }
-    //% blockId=HelloBot_Music_Car block="Play music %index"
-    //% weight=95
-    //% blockGap=10
-    //% color="#006400"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    //% group="Speaker"
-    export function Music_Car(index: enMusic): void {
-        switch (index) {
-            case enMusic.dadadum: music.beginMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once); break;
-            case enMusic.birthday: music.beginMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Once); break;
-            case enMusic.entertainer: music.beginMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once); break;
-            case enMusic.prelude: music.beginMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once); break;
-            case enMusic.ode: music.beginMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once); break;
-            case enMusic.nyan: music.beginMelody(music.builtInMelody(Melodies.Nyan), MelodyOptions.Once); break;
-            case enMusic.ringtone: music.beginMelody(music.builtInMelody(Melodies.Ringtone), MelodyOptions.Once); break;
-            case enMusic.funk: music.beginMelody(music.builtInMelody(Melodies.Funk), MelodyOptions.Once); break;
-            case enMusic.blues: music.beginMelody(music.builtInMelody(Melodies.Blues), MelodyOptions.Once); break;
-            case enMusic.wedding: music.beginMelody(music.builtInMelody(Melodies.Wedding), MelodyOptions.Once); break;
-            case enMusic.funereal: music.beginMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Once); break;
-            case enMusic.punchline: music.beginMelody(music.builtInMelody(Melodies.Punchline), MelodyOptions.Once); break;
-            case enMusic.baddy: music.beginMelody(music.builtInMelody(Melodies.Baddy), MelodyOptions.Once); break;
-            case enMusic.chase: music.beginMelody(music.builtInMelody(Melodies.Chase), MelodyOptions.Once); break;
-            case enMusic.ba_ding: music.beginMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.Once); break;
-            case enMusic.wawawawaa: music.beginMelody(music.builtInMelody(Melodies.Wawawawaa), MelodyOptions.Once); break;
-            case enMusic.jump_up: music.beginMelody(music.builtInMelody(Melodies.JumpUp), MelodyOptions.Once); break;
-            case enMusic.jump_down: music.beginMelody(music.builtInMelody(Melodies.JumpDown), MelodyOptions.Once); break;
-            case enMusic.power_up: music.beginMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once); break;
-            case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
-        }
     }
     //% blockId=HelloBot_Avoid_Sensor block="%direct object sensor detects %value"
     //% weight=87
