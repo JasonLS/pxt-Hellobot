@@ -3,15 +3,18 @@
     "version": "0.0.0",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "edge-connector": "*",
+        "light": "*"
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+        "Hellobot.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
     "public": false,
-    "additionalFilePaths": []
+    "preferredEditor": "tsprj"
 }
